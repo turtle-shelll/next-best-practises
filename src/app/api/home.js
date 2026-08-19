@@ -38,6 +38,7 @@ export async function GET(request) {
     // userAgentFromString
     // console.log("userAgentFromString =>>>>", userAgentFromString);
 
+    console.log("request =>>>>", request);
 
     const { searchParams } = new URL(request.url);
     const name = searchParams.get("name");
