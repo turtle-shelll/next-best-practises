@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +26,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col" style={{ padding: "10rem", background: "red" }}>
         <div style={{ background: "#242623", flex: 1 }}>
-          <div style={{ background: "green" }}>Nav</div>
-          {children}*****
+          <nav style={{ background: "green", gap: "2rem" }}>
+            <ul style={{ display: "flex", justifyContent: "space-around" }}>
+              {/* <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/contactus">Contact</Link></li>
+              <li><Link href="/profile">Profile</Link></li>
+              <li><Link href="/posts">Posts</Link></li> */}
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contactus">Contact</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/posts">Posts</a></li>
+              <li><a href="/posts/1">Post 1</a></li>
+              {/* <li><a href="/posts/1?searchParams=abc">Post 1 searchParams</a></li>
+              <li><a href="/posts/1?searchParams=abc&sdfs">Post 1 searchParams 2</a></li>
+              <li><a href="/posts/1?searchParams=abc&sdfs=def">Post 1 searchParams 3</a></li> */}
+              <li><a href="/posts/1?searchParams=abc&sdfs=def&sfefs=fsfesf">Post 1 searchParams 4</a></li>
+              <li><a href="/posts/1?searchParams=abc&sdfs=def&sfefs=fsfesf&sfsefe=fesfsefe">Post 1 searchParams 5</a></li>
+            </ul>
+          </nav>
+          {children}
         </div>
       </body>
     </html>
